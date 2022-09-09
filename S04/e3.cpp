@@ -20,26 +20,18 @@ bool filtro(char* color, bool* a) {
 }
 
 int main(int argc, char const* argv[]) {
-  /*   char color;
-    bool a = true;
+  string c;
+  bool a = true;
 
-    cout << "Ingrese la secuencia de piezas de colores:" << endl;
+  cout << "Ingrese la secuencia de piezas de colores:" << endl;
 
-    FOR(i, 0, 3) {
-      cin >> color;
-      if (!filtro(&color, &a)) {
-        return 0;
-      }
+  cin >> c;
+
+  FOR(i, 0, 3) {
+    if (!filtro(&c[i], &a)) {
+      return 0;
     }
-
-    cout << "Torre ensamblada y enviada a almacén" << endl; */
-
-  int b = 4;
-  int* ptr_b = &b;
-
-  cout << &b << endl;
-  cout << ptr_b << endl;
-  cout << *ptr_b << endl;
+  }
 
   return 0;
 }
