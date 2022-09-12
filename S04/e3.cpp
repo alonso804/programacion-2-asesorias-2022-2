@@ -6,7 +6,7 @@ using namespace std;
 
 bool filtro(char* color, bool* a) {
   if (*color != 'a' && *color != 'r' && *color != 'b') {
-    cout << "Torre rechazada. No puedo construir una torre con esa secuencia de colores según mi programa de trabajo.Fir - mado: robots A y B : )" << endl;
+    cout << "Torre rechazada. No puedo construir una torre con esa secuencia de colores según mi programa de trabajo.Fir - mado: robots A y B :)" << endl;
     return false;
   }
 
@@ -32,6 +32,7 @@ int main(int argc, char const* argv[]) {
       return 0;
     }
   }
+  cout << "correcto";
 
   return 0;
 }
