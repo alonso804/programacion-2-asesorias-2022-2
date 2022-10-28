@@ -16,9 +16,13 @@ public:
     this->edad = edad;
   }
 
-  void sentarse() {
-    cout << nombre << " sientate" << endl;
+  virtual void diTusPrivados() = 0;
+
+  void habla() {
+    cout << nombre << " habla" << endl;
   }
+
+  virtual ~Mascota() = default;
 };
 
 /* class Perro {
@@ -44,6 +48,11 @@ public:
     this->patas = 4;
     this->raza = raza;
   }
+
+  void diTusPrivados() override {
+    cout << "Patas: " << patas << endl;
+    cout << "Raza: " << raza << endl;
+  }
 };
 
 class Pez : public Mascota {
@@ -55,10 +64,21 @@ public:
     this->aletas = 2;
     this->especie = especie;
   }
+
+  void diTusPrivados() override {
+    cout << "Aletas: " << aletas << endl;
+    cout << "Especie: " << especie << endl;
+  }
 };
 
 int main() {
-  
+  Perro p("Firulais", 3, "Pastor Aleman");
+  p.habla();
+  p.diTusPrivados();
+  cout << endl;
+  Pez g("Nemo", 1, "Payaso");
+  g.habla();
+  g.diTusPrivados();
 
   return 0;
 }
