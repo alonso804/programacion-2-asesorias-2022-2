@@ -5,6 +5,7 @@
 #include "prettyprint.hpp"
 
 // cout = ostream -> consola
+// cin = istream -> consola
 // file = fstream -> archivo
 
 // ios::in = lectura
